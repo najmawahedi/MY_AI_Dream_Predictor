@@ -1,9 +1,17 @@
 function interperatedDream(event) {
   event.preventDefault();
+
   let input = document.querySelector("#input").value;
   console.log(input);
   let title = document.querySelector("#title");
   title.innerHTML = input;
+
+  new Typewriter("#explaination", {
+    strings: "blah blah blah blah",
+    autoStart: true,
+    delay: 75,
+    cursor: "",
+  });
 }
 
 let form = document.querySelector("#form");
