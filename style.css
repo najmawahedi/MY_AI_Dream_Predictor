@@ -13,8 +13,8 @@ h1 {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
   margin-top: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 20px;
+
   text-shadow: white 1px 1px 10px;
   background-color: rgba(240, 248, 255, 0.568);
   border-radius: 8px;
@@ -45,11 +45,11 @@ h1 {
 }
 #Interpretation {
   text-align: left;
-  font-size: 12px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 14px;
+  font-family: monospace;
   line-height: 1.5;
   margin: 20px auto 15px;
-  padding: 0;
+  padding: 20px;
 
   background-color: rgba(240, 248, 255, 0.568);
   border-radius: 8px;
@@ -58,18 +58,21 @@ h1 {
   border-left: solid 4px #354868;
 }
 #title {
-  padding: 20px 30px 10px 25px;
-  font-size: 20px;
+  padding-top: 20px;
+  padding-bottom: 0px;
+  font-size: 24px;
   font-weight: bolder;
 }
 #explaination {
-  padding: 5px 30px 10px 25px;
-  font-size: medium;
+  padding-top: 5px;
+  padding-bottom: 0px;
+  font-size: 14px;
 }
 #signature {
-  padding: 20px 30px 25px 25px;
+  padding: 0px 0px 15px 0px;
   color: #354868;
   font-weight: 600;
+  opacity: 60%;
 }
 body {
   background-image: url(d\ pic.jpg);
