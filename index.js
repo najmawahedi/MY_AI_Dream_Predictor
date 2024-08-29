@@ -1,4 +1,8 @@
 function interperatedDream(response) {
+  // Remove the blinking message
+  let interpretingMessage = document.querySelector("#interpreting-message");
+  interpretingMessage.innerHTML = ""; // Clear the "Interpreting the dream..." message
+
   // Update the interpretation section with the typewriter effect
   new Typewriter("#Interpretation", {
     strings: response.data.answer,
@@ -6,6 +10,7 @@ function interperatedDream(response) {
     delay: 1,
     cursor: "",
   });
+
   console.log(response.data.answer);
 }
 
@@ -21,17 +26,12 @@ function generateDream(event) {
     prompt
   )}&context=${encodeURIComponent(context)}&key=${key}`;
 
-  document.querySelector("#Interpretation").innerHTML =
-    "Interpreting the dream...";
+  // Display the blinking "Interpreting the dream..." message
+  let interpreting = document.querySelector("#Interpretation");
+  interpreting.innerHTML =
+    '<div id="interpreting-message" class="blink">⏳ Interpreting the dream...</div>';
 
-  axios
-    .get(api)
-    .then(interperatedDream)
-    .catch((error) => {
-      console.error(error);
-      document.querySelector("#explaination").innerHTML =
-        "Failed to retrieve interpretation. Please try again later.";
-    });
+  axios.get(api).then(interperatedDream);
 }
 
 let form = document.querySelector("#form");

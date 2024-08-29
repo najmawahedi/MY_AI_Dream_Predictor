@@ -8,24 +8,31 @@ h1 {
   color: black;
 }
 #form {
-  text-align: center;
   font-size: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
   font-weight: 900;
   margin-top: 0;
-  padding: 20px 20px;
+  padding: 20px 0px 0 0;
+  width: 580px;
 
   text-shadow: white 1px 1px 10px;
+}
+#formContainer {
   background-color: rgba(240, 248, 255, 0.568);
   border-radius: 8px;
-  width: 560px;
+  width: 590px;
   margin: auto;
+  text-align: center;
+  padding-bottom: 10px;
+  padding-top: 0;
+  font-size: 12px;
 }
 #input {
   width: 380px;
   padding: 12px 10px;
   border: 2px solid #526481;
   border-radius: 20px;
+  margin: 5px;
 }
 #submit {
   padding: 8px 10px;
@@ -58,7 +65,7 @@ h1 {
   border-left: solid 4px #354868;
 }
 #title {
-  padding-top: 20px;
+  padding-top: 15px;
   padding-bottom: 0px;
   font-size: 24px;
   font-weight: bolder;
@@ -95,4 +102,24 @@ footer {
 }
 a {
   color: rgb(82, 3, 3);
+}
+.blink {
+  animation: blink 1s linear infinite;
+}
+@keyframes blink {
+  25% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0.5;
+  }
+}
+.ie {
+  font-size: 8;
+  color: rgba(0, 0, 0, 0.548);
+  text-align: left;
+  padding-left: 50px;
 }
